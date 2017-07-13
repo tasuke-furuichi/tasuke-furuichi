@@ -1,10 +1,6 @@
 <h1>id=の<%=@message.id%>編集ページ</h1>
 
-<%= form_for(@message) do |f| %>
-  <%= f.label :content, 'メッセージ'%>
-  <%= f.text_field:content %>
+<%= render 'form', message:@message %>
+ 
 
-  <%= submit '投稿'%>
-<% end %>
-
-<%= link_to '一覧に戻る',messages_path%>
+<%= link_to '一覧に戻る',messages_path %>
